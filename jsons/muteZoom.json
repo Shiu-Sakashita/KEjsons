@@ -1,0 +1,37 @@
+{
+    "title": "Mute/Unmute Zoom from Outside App",
+    "rules": [
+        {
+            "description": "Scroll Lock to Launch Zoom and mute",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "parameters": {
+                        "basic.to_delayed_action_delay_milliseconds": 500
+                    },
+                    "from": {
+                        "key_code": "scroll_lock",
+                        "modifiers": {
+                        }
+                    },
+                    "to": [
+                        {
+                            "shell_command": "open '/Applications/zoom.us.app'"
+                        }
+                    ],
+                    "to_delayed_action": {
+                        "to_if_invoked": [
+                            {
+                                "key_code": "a",
+                                "modifiers": [
+                                    "left_command",
+                                    "left_shift"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}
