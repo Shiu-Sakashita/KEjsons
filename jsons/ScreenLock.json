@@ -1,15 +1,15 @@
 {
-  "title": "Add Screen Lock by Cmd+ScrollLock key",
+  "title": "Command+ScrLck to Lock Monitor",
   "rules": [
     {
-        "description": "Ctrl+ScrLck to Lock Monitor",
+        "description": "Command+ScrLck to Lock Monitor",
         "manipulators": [
         {
           "from": {
             "key_code": "scroll_lock",
             "modifiers": {
               "mandatory": [
-                "control"
+                "command"
               ]
             }
           },
