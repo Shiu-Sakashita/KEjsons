@@ -1,0 +1,58 @@
+{
+  "title": "Lock and Sleep Screen",
+    "maintainers": [
+      "Shiu-Sakashita"
+  ],
+  "rules": [
+    {
+        "description": "Command+Pause to sleep screen",
+        "manipulators": [
+        {
+          "from": {
+            "key_code": "pause",
+            "modifiers": {
+              "mandatory": [
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "eject",
+              "modifiers": [
+                "left_control",
+                "left_shift"
+            ]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    },
+    {
+        "description": "Command+ScrLck to lock screen",
+        "manipulators": [
+        {
+          "from": {
+            "key_code": "scroll_lock",
+            "modifiers": {
+              "mandatory": [
+                "command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "q",
+              "modifiers": [
+                "command",
+                "control"
+            ]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}
